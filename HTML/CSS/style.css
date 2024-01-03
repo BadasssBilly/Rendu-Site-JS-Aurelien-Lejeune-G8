@@ -1,0 +1,203 @@
+#menu{
+    position: fixed; /* permet à la nav de "suivre" l'utilisateur lorsqu'il descend sur la page */
+    width: 100%;
+    height: 60px;
+    z-index: 55; /* permet à la nav de passer au dessus de l'image de fond */
+    background-color: var(--bg-color); /* le 0.9 permet un effet de transparence de 10% pour la nav */
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.9);
+}
+*{
+    margin: 0;
+    padding: 0; /* permet à la nav d'être collée tout en haut de la page sans laisser d'espace */
+    box-sizing: border-box;
+    font-family: "OptimusPrinceps";
+}
+#menu #logo{
+    width: 10%; /* permet de gérer la longueur du lien cliquable */
+    height: 100%;
+    margin-left: 30px; /* laisse un espace à gauche de 30 pixels */
+    background-image: url(Images/Icône-feu.png);
+    background-size: 40px 50px;
+    background-position: left;
+    background-repeat: no-repeat; /* le no-repeat permet à l'image de ne pas se répéter en boucle sur toute la nav */
+    cursor: pointer; /* permet de pouvoir cliquer sur le logo afin de par exemple ramener l'utilisateur sur la page d'accueil du site */
+}
+#menu ul li a{
+    color: var(--text-color); /* donne une couleur spécifique à notre texte */
+    font-family: "OptimusPrinceps"; /* donne une police spécifique à notre texte */
+    font-size: 2em; /* donne une taille de police spécifique à notre texte */
+    text-decoration: none; /* la décoration à "none" permet de retirer le soulignement du texte présent lorsque l'on ajoute un lien cliquable à un texte */
+}
+#menu ul li a.active{
+    right: 0;
+}
+#menu ul{
+    position: absolute;
+    right: -550px; /* permet de placer le texte à droite de la nav */
+    top: 0; /* permet de placer le texte en haut de la nav */
+    padding-right: 10px;
+}
+#menu ul li{
+    display: inline-block;
+    padding-right: 14px; /* permet de placer le texte à 14 pixels vers la gauche et d'avoir chaque segment espacé de 15 pixels par rapport aux autres */
+    line-height: 62px; /* permet de placer le texte à 62 pixels en dessous du haut de la page */
+    text-align: center;
+    vertical-align: middle;
+}
+body{
+    background-color: #101524;
+}
+.desc h2{
+    text-align: center; /* aligne le titre au centre de la page */
+    font-size: 4.5em; /* modifie la taille du titre */
+    color: #db0302;
+    text-shadow: 0px 0px 16px rgba(0,0,0,0.9);
+    font-family: "OptimusPrinceps";
+    font-weight: normal;
+}
+h2{
+    font-size: 2.5em; /* modifie la taille du texte sous le titre */
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.23em;
+    font-weight: bold;
+}
+#aPropos .texte {
+    width: 740px;
+    margin: 0 auto; /* permet au texte d'être au centre de la page */
+    padding: 20px;
+}
+#aPropos .texte p{
+    color: var(--menu-color);
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+#aPropos .texte ul{
+    column-count: 2; /* permet d'avoir 2 colonnes de textes */
+    color: var(--menu-color);
+    font-size: 1.5em;
+}
+#aPropos .texte ul{ /* permet aux ul d'être placé en block et de ne plus être aligné avec le reste du texte pour créer un effet de liste centré */
+    display: block;
+    margin-block-start: 2.5em; /* gère la distance entre les blocks et le texte au dessus */
+    margin-block-end: -0.5em; /* gère la distance entre les blocks et le footer en dessous */
+    padding-inline-start: 20px; /* décale le ul à droite de 20 pixels pour être centré */
+}
+#aPropos .texte ul li strong {
+    color: #db0302; /* change la couleur du texte strong */
+}
+#aPropos .texte ul li {
+    list-style: none; /* sert à retirer les puces qui apparaissent naturellements lorsqu'une liste est créée */
+    margin-bottom: 16px; /*permet de créer un espace en bas entre chaque block de texte li */
+}
+#footer{
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px); /* créer un effet de dégradé pour donner une impression de profondeur en utilisant la transparence du rgb */
+}
+#footer a{
+    color: white;
+}
+@media (max-width: 600px) { /* permet d'adapter le site par rapport à la taille de l'écran */
+
+    #menu{
+        height: 6%;
+    }
+
+    #menu #logo{
+        background-size: 90% 90%;
+        margin-left: 2%;
+    }
+
+    #aPropos .texte {
+    width: 100%;
+    padding: 20px;
+    }
+    
+    img{
+        padding-top: 11%;
+    }
+
+    #footer{
+        padding-top: 3%;
+    }
+
+    #menu ul li a{
+        font-size: 150%;
+    }
+}
+@media (max-width: 400px) {
+
+    #menu #logo{
+        background-size: 0% 0%;
+        margin-left: 2%;
+    }
+}
+@media (max-width: 370px){
+
+    #menu ul li a{
+        font-size: 130%;
+    }
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+:root {
+    --bg-color: #101524;
+    --text-color: #DFFFFE;
+    --menu-color: #fbdfa6;
+    font-weight: normal;
+}
+.light-theme {
+    --bg-color: rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --menu-color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+#menu.active ul{
+    right: 50px;
+    transition: 0.3s ease;
+}
+#burger {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    bottom: 55px;
+    right: 10px;
+}
+#burger span {
+    height: 5px;
+    width: 100%;
+    background-color: var(--menu-color);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+#burger span:nth-child(1) {
+    top: 25%;
+}
+#burger span:nth-child(3) {
+    top: 75%;
+}
+#burger.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+#burger.active span:nth-child(2) {
+    opacity: 0;
+}
+#burger.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+}

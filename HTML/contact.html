@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+</head>
+<body>
+    <div id="menu">
+        <div id="logo"></div>
+        <ul id="nav">
+            <li>
+                <a href="index.html" class="intLink">A propos</a>
+            </li>
+            <li>
+                <a href="wiki.html" class="intLink">Wiki</a>
+            </li>
+            <li>
+                <a href="patch.html" class="intLink">Notes de patch</a>
+            </li>
+        </ul>
+    </div>
+    <div id="fond"></div>
+    <div id="bas">
+        <div class="desc" id="aPropos">
+            <h2 class="titre">
+                Contactez-nous !
+            </h2>
+            <form id="formId" onsubmit="submitFormReturn();return false;">
+                <div>
+                    <label for="nom">Prenom:</label>
+                    <input type="text" required name="user_name" id="nom">
+                </div>
+                <div>
+                    <label for="mail">E-Mail:</label>
+                    <input type="email" required name="user_mail" id="mail">
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea required name="user_message" id="message"></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">Envoyer votre message</button>
+                </div>
+            </form>
+            <p id="merci"></p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script src="JS/submit.js"></script>
+    <script src="JS/lightmode.js"></script>
+</body>
+</html>
